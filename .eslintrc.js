@@ -16,11 +16,12 @@ module.exports = {
   },
   extends: [
     // add more generic rulesets here, such as:
-    //'eslint:recommended',
     //"plugin:vue/essential",
     //'plugin:vue/vue3-recommended',
-    "plugin:vue/strongly-recommended",
-    'plugin:vue/recommended', // Use this if you are using Vue.js 2.x.
+    // "plugin:vue/strongly-recommended",
+    /*use el conjunto de reglas recomendado para javascript simple y vue*/
+    'eslint:recommended',
+    'plugin:vue/recommended'// Use this if you are using Vue.js 2.x.
   ],
   rules: {
     // override/add rules settings here, such as:

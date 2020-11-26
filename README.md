@@ -14,8 +14,8 @@ npm run dev
 # build for production with minification
 npm run build
 
-# extensión para configurar eslint-plugin-vue
-npm install -D eslint eslint-plugin-vue
+# extensión para configurar eslint eslint-plugin-vue babel-eslint
+npm i -D eslint eslint-plugin-vue babel-eslint
 ```
 Para detalles de consultar [docs for eslint-plugin-vue](https://eslint.vuejs.org/user-guide/#installation).
 
