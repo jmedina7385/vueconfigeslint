@@ -1,4 +1,19 @@
 module.exports = {
+  root: true,
+  env: {
+    // this section will be used to determine which APIs are available to us
+    // (i.e are we running in a browser environment or a node.js env)
+    /*esta sección se utilizará para determinar qué API están disponibles para nosotros
+    (es decir, estamos ejecutando en un entorno de navegador o un entorno de node.js)*/
+    node: true,
+    browser: true
+  },
+  parserOptions: {
+    parser: "babel-eslint",
+    // specifying a module sourcetype prevent eslint from marking import statements as errors
+    //especificar un tipo de fuente de módulo evita que eslint marque declaraciones de importación como errores
+    sourceType: "module"
+  },
   extends: [
     // add more generic rulesets here, such as:
     //'eslint:recommended',
@@ -54,7 +69,12 @@ module.exports = {
     //Config. de mayúsculas y minúsculas específicas para el nombre de los componentes
     //Aplicar mayúsculas y minúsculas específicas para el nombre de la definición del componente
     "vue/component-definition-name-casing": ["error", "kebab-case"], //"PascalCase" | "kebab-case"
-    "vue/comment-directive": "off"
+    "vue/comment-directive": "off",
+
+    // we should always disable console logs and debugging in production
+    //siempre debemos deshabilitar los registros de la consola y la depuración en producción
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
   }
 
 }

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png"/>
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg.default }}</h1>
   </div>
 </template>
 
@@ -10,7 +10,10 @@ export default {
   name: "app",
   data() {
     return {
-      msg: "Hola mundo Vue.js App",
+      msg: {
+        type:String,
+        default: "Hola mundo Vue.js App"
+      },
     };
   },
 };
